@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="dxcom.test.test.systemManager.NetMobileActivity">
+
+    <Button
+        android:id="@+id/analy_memory"
+        android:text="分析内存"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/analy_method_time"
+        android:text="分析方法时间"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/analy_net_avaliable"
+        android:text="分析网络-是否可用"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/analy_net_type_mobile_connect"
+        android:text="分析网络-链接一手机网络类型"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/analy_net_type_suffer_internet_connect"
+        android:text="分析网络-链接一一互联网访问类型"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

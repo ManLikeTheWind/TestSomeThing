@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center_vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onclick"
+        android:id="@+id/bt2"
+        android:text="跳转到第二个界面"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:singleLine="true"
+        android:text="1234567890123456789*123456789-123456789+123456789/123456789#123456789$123456789%123456789^123456789"/>
+
+
+    <LinearLayout
+        android:id="@+id/dialog_dispatched_worklist_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        android:background="@drawable/sign_on_ne_search_result"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:text="-@string/dialog_dispatched_work_order_title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/lineGray" />
+
+            <ListView
+                android:id="@+id/dispatched_order_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/lineGray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/dispatched_order_cancelTv"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1.0"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:onClick="onclick"
+                android:text="-@string/abbruch" />
+
+            <LinearLayout
+                android:id="@+id/midline"
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/lineGray"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/dispatched_order_okTv"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1.0"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:onClick="onclick"
+                android:text="-@string/dialog_button_ok" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginLeft="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onclick"
+        android:id="@+id/bt_showToast"
+        android:text="展示Toast"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            android:id="@+id/bt_db_test"
+            android:text="bt_db_test"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            android:id="@+id/bt_db_test_insert_or_replace"
+            android:text="bt_db_test_insert_or_replace"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            android:id="@+id/bt_json_test"
+            android:text="bt_json_test"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            android:id="@+id/bt_db_batchReplace"
+            android:text="bt_db_batchReplace"/>
+
+    </LinearLayout>
+
+</LinearLayout>

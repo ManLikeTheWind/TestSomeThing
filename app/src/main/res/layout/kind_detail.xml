@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="dxcom.test.test.systemManager.KindDetailFragment">
+
+    <TextView
+        android:id="@+id/kind_detail"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:textIsSelectable="true" />
+
+    <dxcom.test.test.systemManager.MyView
+        android:layout_width="347dp"
+        android:layout_height="397dp"
+        android:background="#ccc"
+        android:paddingBottom="40dp"
+        android:paddingLeft="20dp"
+        app:exampleColor="#33b5e5"
+        app:exampleDimension="24sp"
+        app:exampleDrawable="@android:drawable/ic_menu_add"
+        app:exampleString="Hello, MyView" />
+
+</LinearLayout>
+
