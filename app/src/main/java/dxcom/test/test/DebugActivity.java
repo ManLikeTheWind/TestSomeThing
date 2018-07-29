@@ -1,6 +1,7 @@
 package dxcom.test.test;
 
 import android.app.Service;
+import android.location.LocationManager;
 import android.os.Debug;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +9,17 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 
 public class DebugActivity extends AppCompatActivity {
     LinearLayout tabhost;
@@ -55,8 +62,22 @@ public class DebugActivity extends AppCompatActivity {
                 Log.e(TAG, "onClick([view]): aft dur = "+ (System.currentTimeMillis()-c));
                 Debug.stopMethodTracing();
                 break;
+            case R.id.btn_viewstub:
+                loadViewStub();
+                break;
         }
     }
+
+    private void loadViewStub(){
+       ViewStub vs= (ViewStub) findViewById(R.id.vs);
+        View inflateView = vs.inflate();
+        int inflatedId = vs.getInflatedId();
+        int id = vs.getId();
+        String format = String.format("vs.class = %s; inflateView.class = %s;inflatedId = %d; id = %d;R.id.layout_tab = %d; R.id.my_view  = %d; ",
+                vs.getClass().getName(), inflateView.getClass().getName(), inflatedId, id,R.id.layout_tab, R.id.my_view );
+        Log.e(TAG, " format = : "+format);
+    }
+
 
 
 
